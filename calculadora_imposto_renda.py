@@ -31,8 +31,8 @@ class CalculadoraImpostoDeRenda():
         return self._get_porcentagem_imposto(salario_anual) * salario_anual
 
     def get_faixa_textual(self):
-        _, porcentagem = self._get_porcentagem_imposto(self._get_salario_anual())
+        porcentagem = self._get_porcentagem_imposto(self._get_salario_anual())
         if porcentagem == 0:
             return "Isento"
-        return str(porcentagem*100) + '%'
+        return str(round(porcentagem*100, 1)) + '%'
     

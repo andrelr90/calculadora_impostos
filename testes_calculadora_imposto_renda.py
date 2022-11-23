@@ -46,5 +46,13 @@ class TestCalculadoraImpostoDeRenda(unittest.TestCase):
         calculadora = CalculadoraImpostoDeRenda(35000, True)
         self.assertAlmostEqual(125125, calculadora.get_valor_imposto_anual())
 
+    def test_get_faixa_textual_isento(self):
+        calculadora = CalculadoraImpostoDeRenda(0, True)
+        self.assertEqual('Isento', calculadora.get_faixa_textual())
+
+    def test_get_faixa_textual_nao_isento(self):
+        calculadora = CalculadoraImpostoDeRenda(35000, True)
+        self.assertEqual('27.5%', calculadora.get_faixa_textual())
+
 if __name__ == '__main__':
     unittest.main()
