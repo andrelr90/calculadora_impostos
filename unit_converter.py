@@ -1,2 +1,0 @@
-class UnitConverter():
-    pass

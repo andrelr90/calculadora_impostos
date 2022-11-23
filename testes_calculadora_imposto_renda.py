@@ -1,7 +1,7 @@
 import unittest
-from unit_converter import UnitConverter
+from calculadora_imposto_renda import CalculadoraImpostoDeRenda
 
-class TestUnitConverter(unittest.TestCase):
+class TestCalculadoraImpostoDeRenda(unittest.TestCase):
     def setUp(self):
         pass
 
